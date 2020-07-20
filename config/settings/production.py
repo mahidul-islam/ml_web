@@ -99,7 +99,14 @@ INSTALLED_APPS += ["anymail"]  # noqa F405
 # https://anymail.readthedocs.io/en/stable/installation/#anymail-settings-reference
 # https://anymail.readthedocs.io/en/stable/esps
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-ANYMAIL = {}
+# ANYMAIL = {}
+
+# Gmail SMTP Server
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'mizihan84@gmail.com'
+EMAIL_HOST_PASSWORD = env("GMAIL_PASSWORD")
+EMAIL_USE_TLS = True
 
 
 # LOGGING
